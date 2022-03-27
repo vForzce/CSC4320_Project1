@@ -56,16 +56,13 @@ public class FIFO {
         int totalWaitTime = 0;
         int totalTurnAroundTime = 0;
 
-        for(int i = 0; i<num; i++){
-            totalWaitTime+=waitTime[i];
-            totalTurnAroundTime+=turnAroundTime[i];
-            System.out.println("Process: " + (i+1));
-            System.out.println("Burst Time: " + burstTime[i]);
-            System.out.println("Wait Time: " + waitTime[i]);
-            System.out.println("Turn Around Time: " + turnAroundTime[i]);
+        for(int i = 0; i<num; i++) {
+            totalWaitTime += waitTime[i];
+            totalTurnAroundTime += turnAroundTime[i];
+            System.out.println("Process: " + (i + 1) + ", Burst Time: " + burstTime[i] + ", Wait Time: " + waitTime[i] + ", Turn Around Time: " + turnAroundTime[i]);
         }
-        double averageWaitTime = totalWaitTime/num;
-        double averageTurnAroundTime = totalTurnAroundTime/num;
+        float averageWaitTime = (float) totalWaitTime/num;
+        float averageTurnAroundTime = (float) totalTurnAroundTime/num;
         System.out.println("Average Wait Time: " + averageWaitTime);
         System.out.print("Average Turn Around Time: " + averageTurnAroundTime);
     }
